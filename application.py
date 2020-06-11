@@ -5,22 +5,9 @@ import pandas as pd
 from zipfile import ZipFile
 import shutil
 import re
-# from yourapp import app, your_cache_config
 
 
 application = Flask(__name__)
-'''
-app.config["CACHE_TYPE"] = "null"
-
-cache = Cache()
-
-
-def main():
-    cache.init_app(app, config=your_cache_config)
-
-    with app.app_context():
-        cache.clear()
-'''
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -77,13 +64,6 @@ def about():
             errors.append(e)
 
     return render_template('about.html', errors=errors, results=results)
-
-#   if request.method == "GET":
-#        try:
-#            return send_file(finalresult.to_csv("4101727.csv",,index=False),
-# attachment_filename="4101727.csv", as_attachment=True)
-#        except Exception as e:
-#            return str(e)
 
 
 @application.route('/download-files/')
