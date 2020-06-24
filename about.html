@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MileStone 2 verification</h1>
+      <p>Please enter the url below: </p>
+      <form role="form" method='POST' action='/'>
+        <div class="form-group">
+          <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;" autofocus required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+		{% for error in errors %}
+        <h4>{{ error }}</h4>
+		{% endfor %}
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+  <body>
+    <div class="container" align="left">
+        <h1></h1>
+        <h2>      </h2>
+        <p>Please click to download the output file </p>
+		<a href="/download-files/" target="blank"><button class='btn btn-default'>Download</button></a>
+		{% for error in errors %}
+        <h4>{{errors}}</h4>
+		{% endfor %}
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
